@@ -28,6 +28,7 @@ public class BoundaryOfTree {
     static void leaves(TreeNode node, List<Integer> ans) {
         if (node == null) return;
         leaves(node.left, ans);
+
         if (node.left == null && node.right != null) {
             ans.add(node.val);
         }

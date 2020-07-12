@@ -7,21 +7,29 @@ import java.util.Arrays;
 public class EvenAndOddNumbers {
 
     public static void main(String[] args) {
-       System.out.println(Arrays.toString(solve( new int[]{1,2,5,6,8,9,17,23,15,10})));
+        System.out.println(Arrays.toString(solve(new int[]{1, 2, 5, 6, 8, 9, 17, 23, 15, 10})));
+        System.out.println(Arrays.toString(solve(new int[]{3, 2, 1, 4})));
+        System.out.println(Arrays.toString(solve(new int[]{1,3})));
     }
 
     static public int[] solve(int[] nums) {
-        int i = -1, j = 0, n = nums.length - 1;
+        int i = 0, j = nums.length - 1;
 
-        while (j < n) {
-            if (nums[j] % 2 != 0) {
+        while (i < j) {
+            if (nums[i] % 2 == 0) {
                 i++;
-                int tmp = nums[i];
-                nums[i] = nums[j];
-                nums[j] = tmp;
-
+            } else {
+                if (nums[j] % 2 != 0) {
+                    j--;
+                }
+                if (nums[j] % 2 == 0) {
+                    int tmp = nums[i];
+                    nums[i] = nums[j];
+                    nums[j] = tmp;
+                    i++;
+                    j--;
+                }
             }
-            j++;
         }
 
         return nums;

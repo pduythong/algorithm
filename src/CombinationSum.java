@@ -58,5 +58,19 @@ public class CombinationSum {
 
     }
 
+    private void combinationSumNoSort(int sum, int[] candidates, List<Integer> element, List<List<Integer>> result) {
+        if (sum == 0) {
+            result.add(new ArrayList<>(element));
+            return;
+        }
+        for (int i = 0; i < candidates.length; i++) {
+            if (candidates[i] <= sum && (element.isEmpty() || candidates[i] >= element.get(element.size() - 1))) {
+                element.add(candidates[i]);
+                combinationSumNoSort(sum - candidates[i], candidates, element, result);
+                element.remove(element.size() - 1);
+            }
+        }
+    }
+
 
 }
