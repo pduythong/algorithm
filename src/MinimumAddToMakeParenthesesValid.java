@@ -10,7 +10,12 @@ It can be written as (A), where A is a valid string.
 Given a parentheses string, return the minimum number of parentheses we must add to make the resulting string valid.
  */
 public class MinimumAddToMakeParenthesesValid {
-    public int minAddToMakeValid(String S) {
+    public static void main(String[] args) {
+        System.out.println(minAddToMakeValid("((()()("));
+        System.out.println(minAddToMakeValid("(()()("));
+    }
+
+    static public int minAddToMakeValid(String S) {
         int ans = 0;
         int bal = 0;
 
