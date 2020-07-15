@@ -20,7 +20,11 @@ Although the above answer is in lexicographical order, your answer could be in a
  */
 public class LetterCombinationsPhoneNumber {
 
-    Map<String, String> phone = new HashMap<String, String>() {{
+    public static void main(String[] args) {
+        System.out.println(letterCombinations("23"));
+    }
+
+    static Map<String, String> phone = new HashMap<String, String>() {{
         put("2", "abc");
         put("3", "def");
         put("4", "ghi");
@@ -31,13 +35,13 @@ public class LetterCombinationsPhoneNumber {
         put("9", "wxyz");
     }};
 
-    public List<String> letterCombinations(String digits) {
+    static public List<String> letterCombinations(String digits) {
         List<String> ans = new ArrayList<>();
         helper(ans, digits, "");
         return ans;
     }
 
-    void helper(List<String> ans, String digits, String combination) {
+    static void helper(List<String> ans, String digits, String combination) {
         if (digits.length() == 0) {
             ans.add(combination);
             return;

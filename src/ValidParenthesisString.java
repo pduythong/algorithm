@@ -27,6 +27,7 @@ public class ValidParenthesisString {
         System.out.println(checkValidString("(*)"));
         System.out.println(checkValidString("(*))"));
         System.out.println(checkValidString("(*)*))("));
+        System.out.println(checkValidString("*(*)*))("));
     }
 
     static public boolean checkValidString(String s) {
