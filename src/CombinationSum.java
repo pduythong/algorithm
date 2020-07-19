@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.zip.Checksum;
 
 /*
 39. Combination Sum
@@ -38,8 +39,9 @@ public class CombinationSum {
 
     static public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> ans = new ArrayList<>();
-        Arrays.sort(candidates);
-        combinationSum(candidates, target, 0, ans, new ArrayList<>());
+//        Arrays.sort(candidates);
+//        combinationSum(candidates, target, 0, ans, new ArrayList<>());
+        combinationSumNoSort(target, candidates, new ArrayList<>(), ans);
         return ans;
 
     }
@@ -58,15 +60,15 @@ public class CombinationSum {
 
     }
 
-    private void combinationSumNoSort(int sum, int[] candidates, List<Integer> element, List<List<Integer>> result) {
+   static private void combinationSumNoSort(int sum, int[] candidates, List<Integer> element, List<List<Integer>> result) {
         if (sum == 0) {
             result.add(new ArrayList<>(element));
             return;
         }
-        for (int i = 0; i < candidates.length; i++) {
-            if (candidates[i] <= sum && (element.isEmpty() || candidates[i] >= element.get(element.size() - 1))) {
-                element.add(candidates[i]);
-                combinationSumNoSort(sum - candidates[i], candidates, element, result);
+        for (int candidate : candidates) {
+            if (candidate <= sum && (element.isEmpty() || candidate >= element.get(element.size() - 1))) {
+                element.add(candidate);
+                combinationSumNoSort(sum - candidate, candidates, element, result);
                 element.remove(element.size() - 1);
             }
         }

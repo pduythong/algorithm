@@ -23,7 +23,7 @@ public class AddTwoNumberLinkedList {
             sum = carry + (l1 != null ? l1.val : 0)
                     + (l2 != null ? l2.val : 0);
 
-            carry = (sum >= 10 ? 1 : 0);
+            carry = (sum > 9 ? 1 : 0);
             sum = sum % 10;
 
             tmp = new ListNode(sum);

@@ -33,8 +33,8 @@ public class DuplicateZeros {
         for (int i = 0; i < n - 1; i++) {
             if (arr[i] == 0) {
 //                if (n - 1 - i >= 0) System.arraycopy(arr, i, arr, i + 1, n - 1 - i);
-                for (int j = n-1; i < j; j--) {
-                    arr[j] = arr[j-1];
+                for (int k = n-1; i < k; k--) {
+                    arr[k] = arr[k -1];
 
                 }
 
