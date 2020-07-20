@@ -15,36 +15,6 @@ public class SumConsecutive {
         System.out.println(Arrays.toString(sumConsecutive(new int[]{1,6,8,5,9,4,7,2,1,2})));
     }
 
-  static   public int[] sumConsecutive1(int[] nums) {
-        int sum = 0;
-        int j = 0, i = 0, ctr = 0;
-        int next = 1;
-
-        while (i < nums.length) {
-            ctr++;
-            sum += nums[i];
-
-            if (ctr == next) {
-                nums[j] = sum;
-                j++;
-                sum=0;
-                ctr = 0;
-                next++;
-            }
-            i++;
-        }
-
-        if (ctr != 0)
-            nums[j] = sum;
-
-        int[] ans = new int[j];
-        for (int k = 0; k < ans.length; k++) {
-            ans[k] = nums[k];
-        }
-        return  ans;
-    }
-
-
    static public int[] sumConsecutive(int[] nums) {
         if (nums.length <= 2) return nums;
 
@@ -77,4 +47,34 @@ public class SumConsecutive {
         return ans;
 
     }
+
+    static   public int[] sumConsecutive1(int[] nums) {
+        int sum = 0;
+        int j = 0, i = 0, ctr = 0;
+        int next = 1;
+
+        while (i < nums.length) {
+            ctr++;
+            sum += nums[i];
+
+            if (ctr == next) {
+                nums[j] = sum;
+                j++;
+                sum=0;
+                ctr = 0;
+                next++;
+            }
+            i++;
+        }
+
+        if (ctr != 0)
+            nums[j] = sum;
+
+        int[] ans = new int[j];
+        for (int k = 0; k < ans.length; k++) {
+            ans[k] = nums[k];
+        }
+        return  ans;
+    }
+
 }

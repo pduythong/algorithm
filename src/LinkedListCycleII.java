@@ -29,7 +29,6 @@ Explanation: There is no cycle in the linked list.
 
 public class LinkedListCycleII {
 
-
     public ListNode hasCycle(ListNode head) {
 
         ListNode slow = head;

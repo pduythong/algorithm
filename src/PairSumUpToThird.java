@@ -5,7 +5,7 @@ import java.util.List;
 public class PairSumUpToThird {
 
     public static void main(String[] args) {
-        twoSum(new int[]{1,1,2,3,5,9,7,1,1}, 2).forEach(System.out::println);
+        twoSum(new int[]{1,1,2,3,5,9,7,1,1}, 5).forEach(System.out::println);
     }
 
     static public List<Integer> twoSum(int[] nums, int target) {

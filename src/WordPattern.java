@@ -35,7 +35,6 @@ public class WordPattern {
         if (splitStr.length != pattern.length())
             return false;
 
-
         for (int i = 0; i < splitStr.length; i++) {
             if (!Objects.equals(index.put(pattern.charAt(i), i) ,
                     index.put(splitStr[i], i))) return false;

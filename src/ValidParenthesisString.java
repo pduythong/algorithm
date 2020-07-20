@@ -20,8 +20,6 @@ Input: "(*))"
 Output: True
  */
 public class ValidParenthesisString {
-
-
     public static void main(String[] args) {
         System.out.println(checkValidString("()"));
         System.out.println(checkValidString("(*)"));
@@ -31,7 +29,6 @@ public class ValidParenthesisString {
     }
 
     static public boolean checkValidString(String s) {
-
         Stack<Integer> stLeft = new Stack<>();
         Stack<Integer> stStar = new Stack<>();
 
@@ -51,7 +48,6 @@ public class ValidParenthesisString {
                     stStar.pop();
                 }
             }
-
 
         }
         // Check the valid sequence of parenthesis.
