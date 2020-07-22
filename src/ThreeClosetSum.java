@@ -32,17 +32,11 @@ public class ThreeClosetSum {
                     closet = sum;
 
                 if (sum > target) {
-//                    if (sum - target < diff) {
-//                        diff = sum - target;
-//                        closet = sum;
-//                    }
                     r--;
+
                 } else {
-//                    if (target - sum < diff) {
-//                        diff = target - sum;
-//                        closet = sum;
-//                    }
                     l++;
+
                 }
 
             }

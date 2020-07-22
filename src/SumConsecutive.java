@@ -19,7 +19,7 @@ public class SumConsecutive {
         if (nums.length <= 2) return nums;
 
         int sum = 0;
-        int current = 0;
+        int index = 0;
         int count = 1;
         int currentCount = 1;
 
@@ -27,7 +27,7 @@ public class SumConsecutive {
             sum += nums[i];
             currentCount--;
             if (currentCount == 0) {
-                nums[current++] = sum;
+                nums[index++] = sum;
                 sum = 0;
                 currentCount = ++count;
             }
@@ -36,14 +36,15 @@ public class SumConsecutive {
 //            }
         }
        if (sum > 0) {
-           nums[current++] = sum;
+           nums[index++] = sum;
        }
 
-        int[] ans = new int[current];
+        int[] ans = new int[index];
 
-        for (int i = 0; i < current; i++) {
-            ans[i] = nums[i];
-        }
+       if (index >= 0) System.arraycopy(nums, 0, ans, 0, index);
+//       for (int i = 0; i < index; i++) {
+//           ans[i] = nums[i];
+//       }
         return ans;
 
     }

@@ -20,7 +20,12 @@ public class MinimumAddToMakeParenthesesValid {
         int bal = 0;
 
         for (char c : S.toCharArray()) {
-            bal += c == '(' ? 1 : -1;
+//            bal += c == '(' ? 1 : -1;
+            if (c == '(')
+                bal++;
+            else
+                bal--;
+
             if (bal == -1) {
                 ans++;
                 bal = 0;
