@@ -40,18 +40,5 @@ public class TopKFrequent {
 
         return ans;
 
-//        return res;
-
-//        if(nums == null || nums.length ==0) return null;
-//
-//        Map<Integer, Integer> map = new HashMap<>();
-////        Set<Integer> list = new HashSet<>();
-//        int[] tmp = new int[nums.length + 1];
-//
-//        for (int num : nums) {
-//            map.put(num, map.getOrDefault(num, 0) + 1);
-//        }
-//
-//        return map.entrySet().stream().filter(i -> i.getValue() >= k).mapToInt(Map.Entry::getKey).toArray();
     }
 }

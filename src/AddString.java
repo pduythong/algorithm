@@ -24,7 +24,7 @@ public class AddString {
 
         while (i >= 0 || j >= 0 || cary == 1) {
             int x = i < 0 ? 0 : num1.charAt(i--) - '0';
-            int y = j < 0 ? 0 : num1.charAt(j--) - '0';
+            int y = j < 0 ? 0 : num2.charAt(j--) - '0';
             int sum = x + y + cary;
             cary = sum > 9 ? 1 : 0;
 

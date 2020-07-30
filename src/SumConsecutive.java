@@ -11,7 +11,7 @@ Output size m
  */
 public class SumConsecutive {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(sumConsecutive1(new int[]{1,6,8,5,9,4,7,2,1,2})));
+//        System.out.println(Arrays.toString(sumConsecutive1(new int[]{1,6,8,5,9,4,7,2,1,2})));
         System.out.println(Arrays.toString(sumConsecutive(new int[]{1,6,8,5,9,4,7,2,1,2})));
     }
 
