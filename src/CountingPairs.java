@@ -37,5 +37,4 @@ public class CountingPairs {
         return ans;
     }
 
-
 }

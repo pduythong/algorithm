@@ -7,7 +7,7 @@
 public class JosephusProblem {
 
     public static void main(String[] args) {
-        System.out.println(solve(9, 2));
+        System.out.println(solve(6, 2));
     }
 
     static public int solve(int n, int k) {
