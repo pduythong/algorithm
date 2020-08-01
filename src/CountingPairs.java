@@ -25,9 +25,9 @@ public class CountingPairs {
         HashSet<Integer> hLow = new HashSet<>();
         HashSet<Integer> hHigh = new HashSet<>();
 
-        for(int i: nums){
-            hLow.add(i);
-            hHigh.add(i+k);
+        for(int a: nums){
+            hLow.add(a);
+            hHigh.add(a+k);
         }
 
         for (int i: hHigh){
