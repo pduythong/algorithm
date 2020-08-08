@@ -27,7 +27,6 @@ public class HappyNumber {
         System.out.println(isHappy(18));
     }
 
-
     static public boolean isHappy(int n) {
         Set<Integer> set = new HashSet<>();
         int squareSum, remain;
@@ -40,9 +39,9 @@ public class HappyNumber {
                 n = n / 10;
             }
 
-            if(squareSum == 1) return true;
+            if (squareSum == 1) return true;
             else
-                n =squareSum;
+                n = squareSum;
 
         }
 

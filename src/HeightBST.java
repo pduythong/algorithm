@@ -12,7 +12,6 @@ public class HeightBST {
 //        root.right.right = new TreeNode(8);
 //        root.right.left.left = new TreeNode(9);
 
-
         System.out.println(height(root));
     }
 
@@ -22,6 +21,5 @@ public class HeightBST {
         int rH = height(root.right);
         return Math.max(lH, rH) + 1;
     }
-
 
 }
