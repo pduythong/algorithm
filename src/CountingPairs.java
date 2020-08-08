@@ -20,18 +20,18 @@ public class CountingPairs {
         System.out.println(countingPairs(list, 1));
     }
 
-    public static int countingPairs(List<Integer> nums, int k){
-        int ans =0;
+    public static int countingPairs(List<Integer> nums, int k) {
+        int ans = 0;
         HashSet<Integer> hLow = new HashSet<>();
         HashSet<Integer> hHigh = new HashSet<>();
 
-        for(int a: nums){
+        for (int a : nums) {
             hLow.add(a);
-            hHigh.add(a+k);
+            hHigh.add(a + k);
         }
 
-        for (int i: hHigh){
-            if(hLow.contains(i)) ans++;
+        for (int b : hHigh) {
+            if (hLow.contains(b)) ans++;
         }
 
         return ans;

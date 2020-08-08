@@ -15,7 +15,6 @@ public class AddString {
         System.out.println(addStrings("99", "9"));
     }
 
-
     static public String addStrings(String num1, String num2) {
         StringBuilder sb = new StringBuilder();
 
