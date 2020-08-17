@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 /*
 Given a list of int, returns the all unique ints with no. of occurances in the list
@@ -14,23 +12,25 @@ O/p:
  */
 public class DistinctArray {
     public static void main(String[] args) {
-        System.out.println(distinctArray(new int[]{1,2,3,2,4,1,1}));
+        System.out.println(distinctArray(new int[]{1, 2, 3, 2, 4, 1, 1}));
     }
 
-    public static List<String> distinctArray(int[] nums) {
+    //    public static List<String> distinctArray(int[] nums) {
+    public static HashMap<Integer, Integer> distinctArray(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
 
         for (int num : nums) {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
 
-        List<String> ans = new ArrayList<>();
-
-        for (Integer key : map.keySet()) {
-            ans.add(key + " - " + map.get(key));
-
-        }
-        return ans;
+        return map;
+//        List<String> ans = new ArrayList<>();
+//
+//        for (Integer key : map.keySet()) {
+//            ans.add(key + " - " + map.get(key));
+//
+//        }
+//        return ans;
 
     }
 

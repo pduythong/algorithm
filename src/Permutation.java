@@ -3,7 +3,6 @@ import java.util.List;
 
 public class Permutation {
 
-
     public static void main(String[] args) {
         int[] nums = new int[]{1, 2, 3};
         permute(nums).forEach(System.out::println);
@@ -13,7 +12,6 @@ public class Permutation {
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         helper(nums, ans, 0);
-        ;
         return ans;
     }
 

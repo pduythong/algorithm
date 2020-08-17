@@ -9,16 +9,6 @@ public class QueueUseStack {
         s2 = new Stack<Integer>();
     }
 
-    public static void main(String[] args) {
-        QueueUseStack q = new QueueUseStack();
-        q.add(1);
-        q.add(2);
-        q.add(3);
-        System.out.println(q.remove());
-        System.out.println(q.remove());
-        System.out.println(q.remove());
-    }
-
     public void add(int x) {
         s1.push(x);
         size++;
@@ -43,6 +33,5 @@ public class QueueUseStack {
     public boolean isEmpty() {
         return size == 0;
     }
-
 
 }

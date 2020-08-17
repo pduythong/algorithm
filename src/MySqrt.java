@@ -4,8 +4,8 @@ public class MySqrt {
     }
 
     public static double mySqrt(int number) {
-        float tmp;
-        float sr = number / 2;
+        double tmp;
+        double sr = number / 2;
         do {
             tmp = sr;
             sr = (tmp + (number / tmp)) / 2;
