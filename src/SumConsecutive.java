@@ -31,10 +31,8 @@ public class SumConsecutive {
                 sum = 0;
                 currentCount = ++count;
             }
-//            if (i == nums.length - 1) {
-//                nums[current++] = sum;
-//            }
         }
+
        if (sum > 0) {
            nums[index++] = sum;
        }

@@ -37,38 +37,38 @@ public class CombinationSum {
         combinationSum(can,8).forEach(System.out::println);
     }
 
-    static public List<List<Integer>> combinationSum(int[] candidates, int target) {
+    static public List<List<Integer>> combinationSum(int[] nums, int target) {
         List<List<Integer>> ans = new ArrayList<>();
-//        Arrays.sort(candidates);
-//        combinationSum(candidates, target, 0, ans, new ArrayList<>());
-        combinationSumNoSort(target, candidates, new ArrayList<>(), ans);
+//        Arrays.sort(nums);
+//        combinationSum(nums, target, 0, ans, new ArrayList<>());
+        combinationSumNoSort(target, nums, new ArrayList<>(), ans);
         return ans;
 
     }
 
-    static void combinationSum(int[] candidates, int target, int index, List<List<Integer>> ans, List<Integer> element) {
+    static void combinationSum(int[] nums, int target, int index, List<List<Integer>> ans, List<Integer> element) {
 
         if (target < 0) return;
 
         if (target == 0) ans.add(new ArrayList<>(element));
 
-        for (int i = index; i < candidates.length; i++) {
-            element.add(candidates[i]);
-            combinationSum(candidates, target - candidates[i], i, ans, element);
+        for (int i = index; i < nums.length; i++) {
+            element.add(nums[i]);
+            combinationSum(nums, target - nums[i], i, ans, element);
             element.remove(element.size()-1);
         }
 
     }
 
-   static private void combinationSumNoSort(int sum, int[] candidates, List<Integer> element, List<List<Integer>> result) {
+   static private void combinationSumNoSort(int sum, int[] nums, List<Integer> element, List<List<Integer>> result) {
         if (sum == 0) {
             result.add(new ArrayList<>(element));
             return;
         }
-        for (int candidate : candidates) {
-            if (candidate <= sum && (element.isEmpty() || candidate >= element.get(element.size() - 1))) {
-                element.add(candidate);
-                combinationSumNoSort(sum - candidate, candidates, element, result);
+        for (int num : nums) {
+            if (num <= sum && (element.isEmpty() || num >= element.get(element.size() - 1))) {
+                element.add(num);
+                combinationSumNoSort(sum - num, nums, element, result);
                 element.remove(element.size() - 1);
             }
         }

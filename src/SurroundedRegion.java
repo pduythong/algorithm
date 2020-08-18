@@ -26,24 +26,24 @@ public class SurroundedRegion {
     public void solve(char[][] board) {
 
         if (board.length == 0 || board[0].length == 0) return;
-        int m = board.length;
-        int n = board[0].length;
+        if (board.length < 3 || board[0].length < 3) return;
+        int rows = board.length;
+        int cols = board[0].length;
 
         // loop first and last column.
-        for (int i = 0; i < m; i++) {
+        for (int i = 0; i < rows; i++) {
             if(board[i][0] == 'O') fill(board, i, 0);
-
-            if(board[i][n-1] == 'O') fill(board, i, n - 1);
+            if(board[i][cols-1] == 'O') fill(board, i, cols - 1);
         }
 
         //loop first and last row.
-        for (int j = 0; j < n; j++) {
+        for (int j = 0; j < cols; j++) {
             if(board[0][j] == 'O') fill(board, 0, j);
-            if(board[m-1][j] == 'O') fill(board, m - 1, j);
+            if(board[rows-1][j] == 'O') fill(board, rows - 1, j);
         }
 
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
                 if(board[i][j] == 'O')
                     board[i][j] ='X';
                 else if(board[i][j] =='*')

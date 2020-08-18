@@ -12,14 +12,14 @@ public class SetAnagram {
         for (String s : arr) {
             char[] letters = s.toCharArray();
             Arrays.sort(letters);
-            String newWord = new String(letters);
+            String key = new String(letters);
 
-            if(ans.containsKey(newWord)){
-                ans.get(newWord).add(s);
+            if(ans.containsKey(key)){
+                ans.get(key).add(s);
             }else{
                 List<String> wordList = new ArrayList<>();
                 wordList.add(s);
-                ans.put(newWord, wordList);
+                ans.put(key, wordList);
 
             }
         }

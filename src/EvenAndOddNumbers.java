@@ -13,34 +13,18 @@ public class EvenAndOddNumbers {
     }
 
     static public int[] solve(int[] nums) {
-        int i = 0, j = nums.length - 1;
+        int l = 0, r = nums.length - 1;
 
-        while (i < j) {
-
-            if (nums[i] % 2 > nums[j] % 2) {
-                int tmp = nums[i];
-                nums[i] = nums[j];
-                nums[j] = tmp;
+        while (l < r) {
+            if (nums[l] % 2 > nums[r] % 2) {
+                int tmp = nums[l];
+                nums[l] = nums[r];
+                nums[r] = tmp;
 
             }
-            if (nums[i] % 2 == 0) i++;
-            if (nums[j] % 2 >  0) j--;
+            if (nums[l] % 2 == 0) l++;
+            if (nums[r] % 2 >  0) r--;
 
-
-//            if (nums[i] % 2 == 0) {
-//                i++;
-//            } else {
-//                if (nums[j] % 2 != 0) {
-//                    j--;
-//                }
-//                if (nums[j] % 2 == 0) {
-//                    int tmp = nums[i];
-//                    nums[i] = nums[j];
-//                    nums[j] = tmp;
-//                    i++;
-//                    j--;
-//                }
-//            }
         }
 
         return nums;
