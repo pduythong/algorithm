@@ -44,4 +44,50 @@ public class WordPattern {
 
     }
 
+    public static void main(String[] args) {
+        System.out.println(binaryPatternMatching("010","amazing"));
+    }
+
+
+
+  public  static   int binaryPatternMatching(String pattern, String s) {
+
+        String binaryString ="";
+        int ans =0;
+
+        for(char c: s.toLowerCase().toCharArray()){
+            if(c =='a'
+                    || c =='e'
+                    || c =='i'
+                    || c =='o'
+                    || c =='u'){
+                binaryString += "0";
+            }else{
+                binaryString += "1";
+            }
+
+        }
+
+        int patLength = pattern.length();
+
+        for(int i =0; i< binaryString.length() ; i++){
+            if(isMatch(binaryString.substring(i,patLength), pattern)){
+                ans++;
+            }
+
+        }
+
+
+        return ans;
+
+    }
+
+
+
+  static   boolean isMatch(String input, String pattern){
+        return input == pattern;
+    }
+
+
+
 }

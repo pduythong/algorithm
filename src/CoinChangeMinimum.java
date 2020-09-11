@@ -15,7 +15,7 @@ Output: -1
 Note:
 You may assume that you have an infinite number of each kind of coin.
  */
-public class CoinChageMinimum {
+public class CoinChangeMinimum {
 
     public static int coinChange(int[] coins, int amount) {
         if (amount == 0) return 0;

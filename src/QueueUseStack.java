@@ -34,4 +34,25 @@ public class QueueUseStack {
         return size == 0;
     }
 
+    public static void main(String[] args) {
+        System.out.println(digitsManipulations(123456));
+    }
+
+    static  public int digitsManipulations(int n) {
+
+        String digits = String.valueOf(n);
+        int ans = 1;
+
+        for ( char c: digits.toCharArray()
+             ) {
+
+            int num = Integer.parseInt(String.valueOf(c));
+            ans *= num;
+
+        }
+
+        return  ans;
+    }
+
+
 }

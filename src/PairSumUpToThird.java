@@ -1,11 +1,10 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class PairSumUpToThird {
 
     public static void main(String[] args) {
-        twoSum(new int[]{1,1,2,3,5,9,7,1,1}, 5).forEach(System.out::println);
+        twoSum(new int[]{1, 1, 2, 3, 5, 9, 7, 1, 1}, 5).forEach(System.out::println);
+        twoSumHash(new int[]{1, 1, 2, 3, 5, 9, 7, 1, 1}, 5).forEach(System.out::println);
     }
 
     static public List<Integer> twoSum(int[] nums, int target) {
@@ -33,5 +32,23 @@ public class PairSumUpToThird {
 
         }
         return ans;
+    }
+
+    public static List<Integer> twoSumHash(int[] nums, int target) {
+        Set<Integer> set = new HashSet<>();
+        List<Integer> ans = new ArrayList<>();
+
+        for (int num : nums) {
+            int tmp = target - num;
+            if (set.contains(tmp)) {
+                ans.add(num);
+                ans.add(tmp);
+            }
+            set.add(num);
+
+        }
+
+        return ans;
+
     }
 }
