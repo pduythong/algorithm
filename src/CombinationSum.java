@@ -37,24 +37,24 @@ public class CombinationSum {
         combinationSum(can,8).forEach(System.out::println);
     }
 
-    static public List<List<Integer>> combinationSum(int[] nums, int target) {
+    static public List<List<Integer>> combinationSum(int[] nums, int sum) {
         List<List<Integer>> ans = new ArrayList<>();
 //        Arrays.sort(nums);
-//        combinationSum(nums, target, 0, ans, new ArrayList<>());
-        combinationSumNoSort(target, nums, new ArrayList<>(), ans);
+//        combinationSum(nums, sum, 0, ans, new ArrayList<>());
+        combinationSumNoSort(sum, nums, new ArrayList<>(), ans);
         return ans;
 
     }
 
-    static void combinationSum(int[] nums, int target, int index, List<List<Integer>> ans, List<Integer> element) {
+    static void combinationSum(int[] nums, int sum, int index, List<List<Integer>> ans, List<Integer> element) {
 
-        if (target < 0) return;
+        if (sum < 0) return;
 
-        if (target == 0) ans.add(new ArrayList<>(element));
+        if (sum == 0) ans.add(new ArrayList<>(element));
 
         for (int i = index; i < nums.length; i++) {
             element.add(nums[i]);
-            combinationSum(nums, target - nums[i], i, ans, element);
+            combinationSum(nums, sum - nums[i], i, ans, element);
             element.remove(element.size()-1);
         }
 

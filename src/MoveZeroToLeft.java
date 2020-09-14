@@ -1,12 +1,7 @@
+import java.util.Arrays;
 /*
  * Given an integer array, move all elements containing '0' to the left while maintaining the order of
  * other elements in the array.
- * */
-
-
-import java.util.Arrays;
-
-/*
  * Runtime Complexity = Linear, O(n).
  * Memory Complexity = Constant, O(1).
  *

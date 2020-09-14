@@ -1,7 +1,7 @@
 public class ReverseWordInString {
 
     public static void main(String[] args) {
-        System.out.println(reverse("a b c d e f"));
+        System.out.println(reverse("aa b bc de e fh"));
     }
 
     public static String reverse(String s) {

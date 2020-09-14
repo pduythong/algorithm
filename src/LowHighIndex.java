@@ -2,10 +2,7 @@
 /*
  * Given a sorted array of integers, return the low and high index of the given key.
  * Return -1 if not found. The array length can be in millions with lots of duplicates.
- * */
 
-
-/*
  * Linear search might be inefficient if the arr length exceeds a millions elements
  * so we can use a modified version of binary search
  * */

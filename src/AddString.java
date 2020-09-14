@@ -30,7 +30,6 @@ public class AddString {
             sb.insert(0, sum % 10);
 
         }
-        int a =0;
         return sb.toString();
     }
 }
