@@ -9,6 +9,7 @@ public class IsomorphismTree {
 
         if (node1.val != node2.val) return false;
 
+
         return (isomorphism(node1.left, node2.left) && isomorphism(node1.right, node2.right)
                 || isomorphism(node1.left, node2.right) && isomorphism(node1.right, node2.left));
     }
