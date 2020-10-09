@@ -30,28 +30,6 @@ public class PlushOne {
 
 
         }
-
         return digits;
-
-
-//        int cary = 1;
-//
-//        for(int i =digits.length-1; i >= 0; i--){
-//            int sum = digits[i] + cary;
-//            digits[i] = sum%10;
-//            cary = sum/10;
-//
-//        }
-//
-//        if(cary == 1){
-//            int[] output = new int[digits.length +1];
-//            output[0] = 1;
-//            System.arraycopy(output,1, digits,0, digits.length);
-//
-//
-//        }
-//
-//        return digits;
-
     }
 }
