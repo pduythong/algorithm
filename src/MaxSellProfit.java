@@ -19,7 +19,7 @@ public class MaxSellProfit {
 
 
     public static int maxSellProfit(int[] nums){
-        int minimumPrice = Integer.MAX_VALUE;
+        int minimumPrice = nums[0];
         int maxProfit = 0;
 
         for (int num : nums) {

@@ -1,5 +1,6 @@
 import java.util.HashSet;
 import java.util.Set;
+import java.util.function.Function;
 
 /*
 Write an algorithm to determine if a number n is "happy".
@@ -64,3 +65,5 @@ public class HappyNumber {
 //        return isHappyHelper(next, cache);
 //    }
 }
+
+

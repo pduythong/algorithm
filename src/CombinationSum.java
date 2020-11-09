@@ -60,16 +60,16 @@ public class CombinationSum {
 
     }
 
-   static private void combinationSumNoSort(int sum, int[] nums, List<Integer> element, List<List<Integer>> result) {
+   static private void combinationSumNoSort(int sum, int[] nums, List<Integer> elements, List<List<Integer>> result) {
         if (sum == 0) {
-            result.add(new ArrayList<>(element));
+            result.add(new ArrayList<>(elements));
             return;
         }
         for (int num : nums) {
-            if (num <= sum && (element.isEmpty() || num >= element.get(element.size() - 1))) {
-                element.add(num);
-                combinationSumNoSort(sum - num, nums, element, result);
-                element.remove(element.size() - 1);
+            if (num <= sum && (elements.isEmpty() || num >= elements.get(elements.size() - 1))) {
+                elements.add(num);
+                combinationSumNoSort(sum - num, nums, elements, result);
+                elements.remove(elements.size() - 1);
             }
         }
     }

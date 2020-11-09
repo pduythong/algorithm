@@ -52,13 +52,12 @@ For example:
     static void solve(int num) {
 
         int count = 0;
-        int init = num;
         int sum = 0;
         int revNum = 0;
         do {
-            revNum = reverse(init);
-            sum = init + revNum;
-            init = sum;
+            revNum = reverse(num);
+            sum = num + revNum;
+            num = sum;
             count++;
         } while (!isPalindrome(sum));
         System.out.println(count + " " + sum);

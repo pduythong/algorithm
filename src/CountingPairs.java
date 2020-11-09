@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class CountingPairs {
         int ans = 0;
         HashSet<Integer> hLow = new HashSet<>();
         HashSet<Integer> hHigh = new HashSet<>();
-
+        
         for (int a : nums) {
             hLow.add(a);
             hHigh.add(a + k);
