@@ -19,11 +19,11 @@ public class Pangram {
 
     public static boolean checkPangram(String s) {
 
-        Set<Integer> mark = new HashSet<>();
+        Set<Character> mark = new HashSet<>();
 
         for (char c : s.toLowerCase().toCharArray()) {
             if (Character.isAlphabetic(c)) {
-                mark.add((int) c);
+                mark.add(c);
             }
         }
         return mark.size() == 26;
