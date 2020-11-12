@@ -6,17 +6,17 @@ import java.util.function.Function;
 public class ComputeCacheTest {
 
     public static void main(String[] args) {
-        Function<String, String> computer = s -> s;
+        Function<String, String> computer = s -> s + " " + s;
         ComputeCache<String, String> computeCache = new ComputeCache<>();
 
         System.out.println("Expected: ?????");
         System.out.println(computeCache.compute("?????", computer));
         // the actual code is the JUnit Assert equals
 
-        Function<String, Integer> computer2 =  s->{
-           int val = Integer.parseInt(s);
-           return  val*val;
-        } ;
+        Function<String, Integer> computer2 = s -> {
+            int val = Integer.parseInt(s);
+            return val * val;
+        };
         ComputeCache<String, Integer> computeCache2 = new ComputeCache<>();
         System.out.println("Expected: ?????");
         System.out.println(computeCache2.compute("2", computer2));

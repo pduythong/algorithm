@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 /*
 You will be given an integer k and a list of integers. Count the number of distinct valid pair of integers (a,b) in the list for which a+k=b.
@@ -23,19 +20,49 @@ public class CountingPairs {
 
     public static int countingPairs(List<Integer> nums, int k) {
         int ans = 0;
-        HashSet<Integer> hLow = new HashSet<>();
-        HashSet<Integer> hHigh = new HashSet<>();
-        
-        for (int a : nums) {
-            hLow.add(a);
-            hHigh.add(a + k);
-        }
+        Map<Integer, Integer> map = new HashMap<>();
 
-        for (int b : hHigh) {
-            if (hLow.contains(b)) ans++;
+        for (Integer num : nums) {
+            if (map.containsKey(num)) {
+                if (k == 0 && map.get(num) == 1) {
+                    ans++;
+                }
+
+                map.put(num, map.get(num) + 1);
+
+            } else {
+                if (map.containsKey(num - k)) {
+                    ans++;
+                }
+
+                if (map.containsKey(num + k)) {
+                    ans++;
+                }
+                map.put(num, 1);
+
+            }
+
         }
 
         return ans;
+
+
+//        int ans = 0;
+//        HashSet<Integer> hLow = new HashSet<>();
+//        HashSet<Integer> hHigh = new HashSet<>();
+//
+//        for (int a : nums) {
+//            hLow.add(a);
+//            hHigh.add(a + k);
+//        }
+//
+//        for (int b : hHigh) {
+//            if (hLow.contains(b)) ans++;
+//        }
+//
+//        return ans;
+
+
     }
 
 }
