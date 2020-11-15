@@ -12,7 +12,6 @@ public class FindMissingNumber {
 
 
     public static int findMissingNumber(int[] nums) {
-
         int total = (nums.length + 1) * (nums.length + 2) / 2;
         for (int num : nums) {
             total -= num;

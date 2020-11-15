@@ -1,43 +1,57 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class StackUseQueue {
-    Queue<Integer> q1, q2;
+public class StackUseQueue<T> {
+    public static void main(String[] args) {
+        StackUseQueue<Integer> stack = new StackUseQueue<>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(44);
+        stack.push(5);
+
+    }
+
+    Queue<T> q1, q2;
     int size = 0;
 
     StackUseQueue() {
-        q1 = new LinkedList<Integer>();
-        q2 = new LinkedList<Integer>();
+        q1 = new LinkedList<>();
+        q2 = new LinkedList<>();
     }
 
-    public void push(int val) {
+    public void push(T val) {
         q2.add(val);
         while (!q1.isEmpty()) {
             q2.add(q1.peek());
             q1.remove();
         }
-        Queue<Integer> q = q1;
+        Queue<T> q = q1;
         q1 = q2;
         q2 = q;
         size++;
     }
 
-    public int top() {
-        if (q1.isEmpty()) return -1;
-        return q1.peek();
+    public T pop() {
+        if (size == 0) return null;
+
+        size--;
+        return q1.poll();
+
+    }
+
+    public T top() {
+        if (!q1.isEmpty()) {
+            return q1.peek();
+        }
+        return  null;
     }
 
     public int size() {
         return this.size;
     }
 
-    public int pop() {
-        if (size == 0) return -1;
 
-        size--;
-        return q1.poll();
-
-    }
 
     public boolean isEmpty() {
         return q1.isEmpty();
