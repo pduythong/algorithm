@@ -7,19 +7,19 @@ public class SecondSmallestInArray {
     }
 
     static public int secondSmallest(int[] nums) {
-        int s1, s2;
-        s1 = s2 = Integer.MAX_VALUE;
+        int n1, n2;
+        n1 = n2 = Integer.MAX_VALUE;
 
         for (int i = 1; i < nums.length; i++) {
-            if (nums[i] < s1) {
-                s1 = nums[i];
-                s2 = s1;
+            if (nums[i] < n1) {
+                n1 = nums[i];
+                n2 = n1;
             }
-            if (nums[i] < s2 && nums[i] != s1) {
-                s2 = nums[i];
+            if (nums[i] < n2 && nums[i] != n1) {
+                n2 = nums[i];
             }
         }
-        return s2;
+        return n2;
     }
 
 }
