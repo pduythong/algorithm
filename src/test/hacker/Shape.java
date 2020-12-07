@@ -1,4 +1,6 @@
-package test;
+package test.hacker;
+
+import test.test;
 
 public class Shape {
     public void drawShape(){

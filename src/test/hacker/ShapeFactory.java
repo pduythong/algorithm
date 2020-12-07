@@ -1,4 +1,4 @@
-package test;
+package test.hacker;
 
 public class ShapeFactory {
     public void drawShape(String type){

@@ -1,6 +1,4 @@
-package test;
-
-import javax.sound.midi.SoundbankResource;
+package test.hacker;
 
 public class Circle extends Shape{
     @Override

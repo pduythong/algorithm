@@ -1,4 +1,4 @@
-package test;
+package test.hacker;
 
 public class Robot {
     Move move = Move.NO_MOVE;
