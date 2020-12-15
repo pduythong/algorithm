@@ -3,6 +3,10 @@ import java.util.Arrays;
 public class SquaresSortedArray {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(sortedSquares(new int[] {-4,-1,0,2,10})));
+        System.out.println(Arrays.toString(sortedSquares(new int[] {-7,-3,2,3,11})));
+
+
+
     }
 
     static public int[] sortedSquares(int[] a) {
